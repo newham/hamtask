@@ -28,6 +28,10 @@ func Float64(f float64) Data {
 	return Data{f}
 }
 
+func (d Data) Value() interface{} {
+	return d.value
+}
+
 func (d Data) String() string {
 	if d.Type() == "string" {
 		return d.value.(string)
